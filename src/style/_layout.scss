@@ -62,8 +62,26 @@
   &__display{
     width: 100%;
     min-height: 20rem;
+    text-align: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     background: $color-primary-dark;
-
+    &--result{
+      color: $color-white;
+      font-size: 4rem;
+    }
+    &--calculation{
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      color:$color-secondary-2;
+      font-size: 3rem;
+    }
   }
   &__content{
     display: -webkit-box;

@@ -3783,19 +3783,19 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _test__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test */ \"./src/js/test.js\");\n\nconsole.log(_test__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _views_base_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./views/base.js */ \"./src/js/views/base.js\");\n //handling the number or operator clicks\n\nconst eventHandler = () => {\n  //identify a button when clicked, call the callback function\n  _views_base_js__WEBPACK_IMPORTED_MODULE_0__[\"elements\"].buttonsParent.addEventListener('click', e => {\n    console.log(e);\n  }); //display it in the calculation\n  //pass the entered number to the model\n  //display the result in the display\n};\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
-/***/ "./src/js/test.js":
-/*!************************!*\
-  !*** ./src/js/test.js ***!
-  \************************/
-/*! exports provided: default */
+/***/ "./src/js/views/base.js":
+/*!******************************!*\
+  !*** ./src/js/views/base.js ***!
+  \******************************/
+/*! exports provided: elements */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (23);\n\n//# sourceURL=webpack:///./src/js/test.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"elements\", function() { return elements; });\nconst elements = {\n  displayResult: document.querySelector('.calculator__display--result'),\n  displayCalculation: document.querySelector('.calculator__display--calculation'),\n  buttonsParent: document.querySelector('.calculator__op')\n};\n\n//# sourceURL=webpack:///./src/js/views/base.js?");
 
 /***/ }),
 
