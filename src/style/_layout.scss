@@ -1,0 +1,212 @@
+//Main: ./main.scss
+
+.container{
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  &__bg1{
+    background: $bg-color-1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-clip-path: polygon(0% 0, 90% 0%, 10% 100%, 0% 100%);
+            clip-path: polygon(0% 0, 90% 0%, 10% 100%, 0% 100%);
+  }
+  &__bg2{
+    background: $bg-color-2;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-clip-path: polygon(90% 0%, 100% 0%, 100% 100%, 10% 100%);
+            clip-path: polygon(90% 0%, 100% 0%, 100% 100%, 10% 100%);
+  }
+}
+
+
+.calculator{
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+  height: 95vh;
+  width: 54rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+
+  &__degrad{
+    display: block;
+    width: 100%;
+    height: 1rem;
+    background: $color-primary-dark;
+  }
+  &__display{
+    width: 100%;
+    min-height: 20rem;
+    background: $color-primary-dark;
+
+  }
+  &__content{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    height: auto;
+    -webkit-box-flex:1;
+        -ms-flex:1;
+            flex:1;
+    display: flex;
+  }
+  &__op{
+    -webkit-box-flex : 1;
+        -ms-flex : 1;
+            flex : 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+    &--left{
+      background-color: $color-primary;
+      &  *{
+        color: $color-white;
+        font-size: 3.5rem;
+      }
+      font-family: sans-serif;
+      -webkit-box-flex:3;
+          -ms-flex:3;
+              flex:3;
+      display: grid;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      height: 100%;
+      grid-template-rows: .1rem repeat(4,1fr) .1rem;
+      grid-template-columns: repeat(3,minmax(5rem,1fr));
+      grid-gap: 3rem;
+      grid-template-areas:  ". . ."
+                            "seven eight nine"
+                            "four five six"
+                            "one two three"
+                            "zero dot eq"
+                            ". . .";
+    }
+    &--right{
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      background-color: $color-secondary-1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-size: 3.5rem;
+      font-family: sans-serif;
+      color: $color-primary;
+    }
+
+  }
+  &__sci{
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 1rem;
+            flex: 0 0 1rem;
+    -ms-flex-item-align: center;
+        align-self: center;
+    content: ' \00AB';
+    height: 100%;
+    background-color: blue;
+    color: $color-white;
+  }
+}
+
+.btn{
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  cursor: pointer;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  &--1{
+    grid-area: one;
+  }
+
+  &--2{
+    grid-area: two;
+  }
+
+  &--3{
+    grid-area: three;
+  }
+  &--4{
+    grid-area: four;
+  }
+  &--5{
+    grid-area: five;
+  }
+  &--6{
+    grid-area: six;
+  }
+  &--7{
+    grid-area: seven;
+  }
+  &--8{
+    grid-area: eight;
+  }
+  &--9{
+    grid-area: nine;
+  }
+  &--0{
+    grid-area: zero;
+  }
+  &--eq{
+    grid-area: eq;
+  }
+  &--dot{
+    grid-area: dot;
+  }
+  &--sub{
+    grid-area: sub;
+    background-color:$color-secondary-1;
+  }
+  &--add{
+    grid-area: add;
+    background-color:$color-secondary-1;
+  }
+  &--mul{
+    grid-area: mul;
+    background-color:$color-secondary-1;
+  }
+  &--div{
+    grid-area: div;
+    background-color:$color-secondary-1;
+  }
+  &--clr{
+    grid-area: clr;
+    background-color:$color-secondary-1;
+  }
+}

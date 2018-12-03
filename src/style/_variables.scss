@@ -1,0 +1,34 @@
+// COLORS
+/*
+answer region :
+  bg #020217
+  answer $color-grey
+  calculations #2da36a
+number region:
+  bg $color-primary-dark
+  number font-color $color-grey
+  symbols color #11ca66
+
+right region #3fbc82
+$color-primary-dark
+
+bg-green #49dc98
+
+*/
+$bg-color-1: #93f0cc;
+$bg-color-2: #71719e;
+
+$color-primary: #0c0c5c;
+$color-primary-dark: #06063f;
+$color-primary-light: #414187;
+$color-secondary-1: #47e4a9;//right region
+$color-secondary-2: #2a857b;//expression font-color
+$color-secondary-3: #44daa6;//ac font-color
+$color-grey: #dfdfe7;
+
+$color-white: #fff;
+$color-black: #000;
+
+
+// FONT
+$default-font-size: 1.6rem;
