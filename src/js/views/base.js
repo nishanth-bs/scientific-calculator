@@ -4,5 +4,6 @@ export const elements = {
 
   buttonsParent : document.querySelector('.calculator__op'),
   scientificDrawer:  document.querySelector('.calculator__sci'),
-  drawer: document.querySelector('.open')
+  drawer: document.querySelector('.open'),
+  clearButton : document.querySelector('#clr')
 }

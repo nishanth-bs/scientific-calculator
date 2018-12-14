@@ -68,6 +68,8 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    overflow-x: auto;
+    overflow-y: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -166,6 +168,7 @@
     background-color: blue;
     color: $color-white;
     z-index: 150;
+    cursor: pointer;
   }
 }
 
@@ -286,10 +289,12 @@
 .open{
   position: absolute;
   background-color: #efefef;
+  color: $color-primary;
   left: 100%;
   top: 0;
   height: 100%;
   width: 75%;
+  font-size: 2.8rem;
   display: grid;
   grid-template-rows: .1rem repeat(5,1fr) .1rem;
   grid-template-columns: repeat(3,minmax(5rem,1fr));
@@ -309,4 +314,12 @@
   visibility:visible;
   z-index: 100;
   left:25%;
+}
+.larr{
+  content: ' \25C0';
+  font-size: 2rem;
+}
+.rarr{
+  content: '\ 25b6';
+  font-size: 2rem;
 }
