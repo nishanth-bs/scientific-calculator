@@ -13,6 +13,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+          overflow: hidden;
   &__bg1{
     background: $bg-color-1;
     width: 100%;
@@ -60,6 +61,7 @@
     background: $color-primary-dark;
   }
   &__display{
+    position: relative;
     width: 100%;
     min-height: 20rem;
     text-align: right;
@@ -72,15 +74,17 @@
             flex-direction: column;
     background: $color-primary-dark;
     &--result{
-      color: $color-white;
+      color: $color-secondary-2;
       font-size: 4rem;
+      -webkit-transition: all 1s cubic-bezier(.72,.05,.27,.93);
+      transition: all 1s cubic-bezier(.72,.05,.27,.93);
     }
     &--calculation{
       -webkit-box-flex: 1;
           -ms-flex: 1;
               flex: 1;
-      color:$color-secondary-2;
-      font-size: 3rem;
+      color:$color-white;
+      font-size: 7rem;
     }
   }
   &__content{
@@ -91,6 +95,8 @@
         -ms-flex:1;
             flex:1;
     display: flex;
+    position: relative;
+    overflow: hidden;
   }
   &__op{
     -webkit-box-flex : 1;
@@ -99,6 +105,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: relative;
     -ms-flex: 1 1 auto;
         flex: 1 1 auto;
     &--left{
@@ -158,6 +165,7 @@
     height: 100%;
     background-color: blue;
     color: $color-white;
+    z-index: 150;
   }
 }
 
@@ -227,4 +235,78 @@
     grid-area: clr;
     background-color:$color-secondary-1;
   }
+  &--inv{
+    grid-area: inv;
+  }
+  &--degrad{
+    grid-area: degrad;
+  }
+  &--per{
+    grid-area:per;
+  }
+  &--sin{
+    grid-area: sin;
+  }
+  &--cos{
+    grid-area: cos;
+  }
+  &--tan{
+    grid-area: tan;
+  }
+  &--ln{
+    grid-area: ln;
+  }
+  &--log{
+    grid-area: log;
+  }
+  &--root{
+    grid-area: root;
+  }
+  &--e{
+    grid-area: e;
+  }
+  &--power{
+    grid-area: power;
+  }
+
+  &--pi{
+    grid-area: pi;
+  }
+  &--open{
+    grid-area: open;
+  }
+  &--close{
+    grid-area: close;
+  }
+  &--fact{
+    grid-area: fact;
+  }
+
+}
+.open{
+  position: absolute;
+  background-color: #efefef;
+  left: 100%;
+  top: 0;
+  height: 100%;
+  width: 75%;
+  display: grid;
+  grid-template-rows: .1rem repeat(5,1fr) .1rem;
+  grid-template-columns: repeat(3,minmax(5rem,1fr));
+  grid-gap: 3rem;
+  grid-template-areas:  ". . ."
+                        "inv degrad per"
+                        "sin cos tan"
+                        "ln log root"
+                        "pi e power"
+                        "open close fact"
+                        ". . .";
+  -webkit-transition: all .3s;
+  visibility: hidden;
+  transition: all .3s;
+}
+.open-drawer{
+  visibility:visible;
+  z-index: 100;
+  left:25%;
 }

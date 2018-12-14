@@ -5,7 +5,7 @@ export const res = str =>{
     return eval(str);
   }
   catch(e){
-    return e;
+    return "";
   }
 
 
