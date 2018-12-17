@@ -12,5 +12,5 @@ To run it on your machine:
 ![](https://github.com/nishanth-bs/scientific-calculator/blob/master/sci-calc.gif)
 
 # Developed by
-![alt text](https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiy5OTBt6bfAhXHWisKHUoPBR0QjRx6BAgBEAU&url=https%3A%2F%2Fin.linkedin.com%2Fin%2Fnishanth-bs&psig=AOvVaw1STYpU67D7pG0U4C9amavU&ust=1545121295591737 "Nishanth B S")
+![alt text](https://github.com/yes-i-am-mr-robot/yo/blob/master/107248%20NISHANTH.jpg "Nishanth B S")
 ### Nishanth B S
