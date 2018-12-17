@@ -38,12 +38,13 @@
 
 
 .calculator{
-  position: absolute;
+  /*position: absolute;
   z-index: 10;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);*/
+  margin: 2.5vh auto;
   height: 95vh;
   width: 54rem;
   display: -webkit-box;
@@ -53,6 +54,12 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  @media only screen and (max-width:1000px){
+    margin: 0 0;
+    height: 100vh;
+    width: 100%;
+
+  }
 
   &__degrad{
     display: block;
@@ -63,7 +70,10 @@
   &__display{
     position: relative;
     width: 100%;
-    min-height: 20rem;
+    max-height: 60rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     text-align: right;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -75,9 +85,15 @@
         -ms-flex-direction: column;
             flex-direction: column;
     background: $color-primary-dark;
+    @media only screen and (max-width:968px){
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+    }
     &--result{
       color: $color-secondary-2;
       font-size: 4rem;
+
       -webkit-transition: all 1s cubic-bezier(.72,.05,.27,.93);
       transition: all 1s cubic-bezier(.72,.05,.27,.93);
     }
@@ -86,19 +102,23 @@
           -ms-flex: 1;
               flex: 1;
       color:$color-white;
-      font-size: 7rem;
+      font-size: 6rem;
+
     }
   }
   &__content{
     display: -webkit-box;
     display: -ms-flexbox;
     height: auto;
-    -webkit-box-flex:1;
-        -ms-flex:1;
-            flex:1;
     display: flex;
     position: relative;
     overflow: hidden;
+    @media only screen and (max-width: 640px){
+      overflow: auto;
+    }
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
   &__op{
     -webkit-box-flex : 1;
@@ -115,6 +135,7 @@
       &  *{
         color: $color-white;
         font-size: 3.5rem;
+
       }
       font-family: sans-serif;
       -webkit-box-flex:3;
@@ -126,7 +147,8 @@
       height: 100%;
       grid-template-rows: .1rem repeat(4,1fr) .1rem;
       grid-template-columns: repeat(3,minmax(5rem,1fr));
-      grid-gap: 3rem;
+      //grid-gap: 3rem;
+
       grid-template-areas:  ". . ."
                             "seven eight nine"
                             "four five six"
@@ -139,6 +161,7 @@
           -ms-flex: 1;
               flex: 1;
       background-color: $color-secondary-1;
+      cursor: pointer;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -151,7 +174,8 @@
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      font-size: 3.5rem;
+      font-size: 4rem;
+
       font-family: sans-serif;
       color: $color-primary;
     }
@@ -159,8 +183,8 @@
   }
   &__sci{
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 1rem;
-            flex: 0 0 1rem;
+        -ms-flex: 0 0 3rem;
+            flex: 0 0 3rem;
     -ms-flex-item-align: center;
         align-self: center;
     content: ' \00AB';
@@ -173,13 +197,15 @@
 }
 
 .btn{
-  justify-self: center;
-  -ms-flex-item-align: center;
-      align-self: center;
   cursor: pointer;
   text-align: center;
   height: 100%;
   width: 100%;
+  border-radius: 300px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: center;
   &--1{
     grid-area: one;
   }
@@ -296,16 +322,22 @@
   width: 75%;
   font-size: 2.8rem;
   display: grid;
-  grid-template-rows: .1rem repeat(5,1fr) .1rem;
+  grid-template-rows: .1rem repeat(4,1fr) .1rem;
   grid-template-columns: repeat(3,minmax(5rem,1fr));
   grid-gap: 3rem;
   grid-template-areas:  ". . ."
+                          "sin cos tan"
+                          "ln log root"
+                          "open close e"
+                          ". pi ."
+                          ". . .";
+/*  grid-template-areas:  ". . ."
                         "inv degrad per"
                         "sin cos tan"
                         "ln log root"
                         "pi e power"
                         "open close fact"
-                        ". . .";
+                        ". . .";*/
   -webkit-transition: all .3s;
   visibility: hidden;
   transition: all .3s;
@@ -316,10 +348,15 @@
   left:25%;
 }
 .larr{
-  content: ' \25C0';
+  content: ' \02C2';
   font-size: 2rem;
 }
 .rarr{
-  content: '\ 25b6';
+  content: ' \02C3';
   font-size: 2rem;
+  //color: 
+}
+
+.disabled{
+  background-color: #aaa;
 }

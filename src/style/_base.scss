@@ -15,6 +15,10 @@ html{
 *::before{
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+          -webkit-user-select: none;
+             -moz-user-select: none;
+              -ms-user-select: none;
+                  user-select: none;
 }
 
 body{
